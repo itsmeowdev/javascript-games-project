@@ -1,26 +1,27 @@
 # 🕹️ All Project Games JavaScript
 
-Kumpulan proyek game interaktif berbasis JavaScript murni tanpa library eksternalyang dirancang untuk mengasah logika, meningkatkan keterampilan pemrograman, serta memperkenalkan dasar-dasar pengembangan game di web.
+A collection of interactive game projects based on pure JavaScript without external libraries designed to hone logic, improve programming skills, and introduce the basics of game development on the web.
 
-## 📦 Daftar Game (Coming Soon)
+## 📦 Game List (Coming Soon)
 
-📌 _Catatan:_ Game baru akan ditambahkan secara bertahap seiring pengembangan.
+📌 _Note:_ New games will be added gradually as development progresses.
 
-## 🚀 Teknologi yang Digunakan
+## 🚀 Technology Used
 
-- **HTML5** – Struktur halaman dan elemen game.
-- **CSS3 / Tailwind CSS** – Styling responsif dan modern.
-- **Vanilla JavaScript** – Logika interaktif dan gameplay.
+- **HTML5** – Page structure and game elements.
+- **CSS3 / Tailwind CSS** – Responsive and modern styling.
+- **Vanilla JavaScript** – Interactive logic and gameplay.
 
-## 🧑‍💻 Kontribusi
+## 🧑‍💻 Contribution
 
-Kontribusi sangat terbuka! Jika kamu ingin menambahkan game baru atau meningkatkan fitur yang ada:
+Contributions are very welcome! If you want to add a new game or improve an existing feature:
 
-1. Fork repositori ini.
-2. Buat branch baru: `git checkout -b fitur-baru`.
-3. Commit perubahanmu.
-4. Kirim Pull Request.
+1. Fork this repository.
+2. Create a new branch: `git checkout -b new-feature`.
+3. Commit your changes.
+4. Submit a Pull Request.
 
-## ✌️ Salam Akal Sehat
+## ✌️ Greetings Common Sense
 
 ![meme](https://th.bing.com/th/id/OIP.IN0zqLjbNtnwcoNEbmHp2wAAAA?w=165&h=180&c=7&r=0&o=7&pid=1.7&rm=3)
+
