@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kuis Interaktif</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Kuis Interaktif</h1>
+      <div id="high-score">Skor Tertinggi: 0</div>
+      <div id="timer">Waktu: 10</div>
+      <div id="quiz-container">
+        <div id="question"></div>
+        <div id="answers"></div>
+        <button id="next-btn">Selanjutnya</button>
+      </div>
+      <div id="result" class="hidden"></div>
+      <button id="restart-btn" class="hidden">Ulangi Kuis</button>
+      <canvas id="scoreChart" width="400" height="200" class="hidden"></canvas>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

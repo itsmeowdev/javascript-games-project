@@ -1,0 +1,212 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Font & warna dasar */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #ffffff, #dbeafe); /* putih ke biru */
+  color: #333;
+  text-align: center;
+  padding: 50px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Kontainer utama */
+.main-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Judul dan info waktu */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+#timer,
+#best-time {
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Tombol */
+button {
+  margin: 10px 8px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  background-color: #3674B5;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+button:hover {
+  background-color: #578FCA;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(54, 116, 181, 0.3);
+}
+
+/* Papan permainan */
+#board {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  gap: 4px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+/* Kotak sel */
+.cell {
+  width: 40px;
+  height: 40px;
+  background-color: #2c7be5;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 4px;
+  transition: transform 0.15s ease, background-color 0.25s ease;
+}
+
+.cell:hover:not(.revealed) {
+  background-color: #489af0;
+}
+
+.cell.revealed {
+  background-color: skyblue;
+  color: #111;
+  transform: scale(1.05);
+  animation: flipReveal 0.3s ease;
+}
+
+.cell.flagged {
+  background-color: #aecbfa;
+  color: #1e3a8a;
+}
+
+/* Animasi buka kotak */
+@keyframes flipReveal {
+  0% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  #board {
+    grid-template-columns: repeat(10, 32px);
+    gap: 3px;
+  }
+
+  .cell {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Dark mode */
+body.dark-mode {
+  background: linear-gradient(to bottom right, #1e3a8a, #111827);
+  color: #f0f0f0;
+}
+
+body.dark-mode h1 {
+  color: #f8f8f8;
+}
+
+body.dark-mode .cell {
+  background-color: #444;
+  color: #eee;
+}
+
+body.dark-mode .cell.revealed {
+  background-color: #888;
+  color: #111;
+}
+
+body.dark-mode .cell.flagged {
+  background-color: #aa6655;
+  color: #ffddcc;
+}
+
+body.dark-mode button {
+  background-color: #555;
+  color: #fdfdfd;
+}
+
+body.dark-mode button:hover {
+  background-color: #777;
+}
+
+body.dark-mode .main-container {
+  background: rgba(30, 58, 138, 0.4);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Efek partikel kemenangan */
+#particle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #2c7be5;
+  animation: fly 1s ease-out forwards;
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) scale(0.5);
+    opacity: 0;
+  }
+}
+
+body.dark-mode .particle {
+  background-color: #90cdf4;
+}

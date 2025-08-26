@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>🎮 Rock Paper Scissors 🎮</h1>
+
+      <div class="scoreboard">
+        <div class="score">
+          <div class="score-label">Player</div>
+          <div class="score-value" id="playerScore">0</div>
+        </div>
+        <div class="score">
+          <div class="score-label">Computer</div>
+          <div class="score-value" id="computerScore">0</div>
+        </div>
+      </div>
+
+      <div class="choices">
+        <div class="choice" data-choice="rock">🪨</div>
+        <div class="choice" data-choice="paper">📄</div>
+        <div class="choice" data-choice="scissors">✂️</div>
+      </div>
+
+      <div class="battle-area">
+        <div class="battle-display" id="battleDisplay" style="display: none">
+          <div class="player-choice" id="playerChoice"></div>
+          <div class="vs">VS</div>
+          <div class="computer-choice" id="computerChoice"></div>
+        </div>
+      </div>
+
+      <div class="result" id="result">
+        Pilih Rock, Paper, atau Scissors untuk mulai!
+      </div>
+
+      <button class="reset-btn" onclick="resetGame()">Reset Game</button>
+
+      <div class="game-instructions">
+        <strong>Cara Bermain:</strong><br />
+        🪨 Rock mengalahkan Scissors<br />
+        📄 Paper mengalahkan Rock<br />
+        ✂️ Scissors mengalahkan Paper
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
